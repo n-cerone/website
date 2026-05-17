@@ -51,11 +51,11 @@ links = [
 # Links
 # Arbitrary links can be added to the footer by defining the following list in the [extra.footer] section:
 
-[extra.footer]
-links = [
-    { url = "about", i18n_key = "about" },
-    { url = "sitemap.xml", i18n_key = "sitemap", no_translation = true },
-]
+# [extra.footer]
+# links = [
+#     { url = "about", i18n_key = "about" },
+#     { url = "sitemap.xml", i18n_key = "sitemap", no_translation = true },
+# ]
 # The value of the i18n_key must be in the i18n files for your languages (see en.toml, for example). If the parameter no_translation is set to true, than the URL is not adapted to contain the current language code. This is needed for external links or something like the sitemap.xml in the example, that is not translated within your website.
 
 # Social Icons
