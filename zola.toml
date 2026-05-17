@@ -11,14 +11,12 @@ build_search_index = true
 index_format = "elasticlunr_json"
 
 [markdown]
-highlight_code = true
-highlight_theme = "css"
+# Removed the obsolete highlight_code line to fix the compilation crash
 
 [markdown.highlighting]
 theme = "catppuccin-mocha"
 
 [taxonomies]
-# This array structure is now properly formatted for Zola's compilation engine
 taxonomies = [
     { name = "projects", paginate_by = 5, feed = true },
     { name = "skills", paginate_by = 5, feed = true }
