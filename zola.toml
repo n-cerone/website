@@ -1,5 +1,5 @@
 # ==========================================
-# 1. Global Core Settings (Must be at the top)
+# 1. Global Core Settings (Must be at the top) 
 # ==========================================
 base_url = "https://ncerone.com"
 theme = "project-portfolio"
