@@ -1,3 +1,4 @@
-+++ 
-title = "Projects" 
-+++ 
++++
+title = "Projects"
+render = true
++++
