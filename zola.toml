@@ -1,33 +1,97 @@
 base_url = "https://ncerone.com"
-title = "Nicholas Cerone"
-description = "Mechanical Engineering Portfolio"
-default_language = "en"
+
 theme = "project-portfolio"
 
-compile_sass = true
-build_search_index = true
-
-[search]
-index_format = "elasticlunr_json"
-
-[markdown]
-
-[markdown.highlighting]
-theme = "catppuccin-mocha"
-
 taxonomies = [
-    { name = "projects", paginate_by = 5, feed = true },
-    { name = "skills", paginate_by = 5, feed = true }
+    {name = "projects", paginate_by = 5, feed = true},
+    {name = "skills", paginate_by = 5, feed = true},
 ]
 
-[extra]
-enable_theme_switching = true
+# Color Schemes
+# Set a light and dark color scheme:
+
 daisyui_theme_light = "light"
 daisyui_theme_dark = "dark"
 
+# If you want to allow your visitors to change the used color scheme, just set the following variable in the [extra] section of your config.toml:
+
+[extra]
+enable_theme_switching = true
+
+
+# Search
+# Integrating a search into your website is as easy as adding the following to your configuration:
+
+# enable it globally for the default language
+build_search_index = true
+
+[search]
+# only this format is supported by the theme
+index_format = "elasticlunr_json"
+
+# you need to enable search at all your language sections as well
+[languages.de]
+build_search_index = true
+
+
+# Navbar
+# Arbitrary links can be added to the footer by defining the following list in the [extra.navbar] section:
+
 [extra.navbar]
-# Swapped i18n_key to direct names to bypass the language file dependency crash
 links = [
-    { url = "projects", name = "Projects" },
-    { url = "skills", name = "Skills" }
+    { url = "projects", i18n_key = "projects" },
+    { url = "skills", i18n_key = "skills" },
+    { url = "blog", i18n_key = "blog" },
 ]
+# The value of the i18n_key must be in the i18n files for your languages (see en.toml, for example).
+
+# Footer
+#All three parts of the footer can be adapted: the links, the social icons, and the copyright notice.
+
+# Links
+# Arbitrary links can be added to the footer by defining the following list in the [extra.footer] section:
+
+[extra.footer]
+links = [
+    { url = "about", i18n_key = "about" },
+    { url = "sitemap.xml", i18n_key = "sitemap", no_translation = true },
+]
+# The value of the i18n_key must be in the i18n files for your languages (see en.toml, for example). If the parameter no_translation is set to true, than the URL is not adapted to contain the current language code. This is needed for external links or something like the sitemap.xml in the example, that is not translated within your website.
+
+# Social Icons
+# The social icons in the footer can be adapted by setting any of the following variables:
+
+[extra.social]
+codeberg = ""
+github = ""
+gitlab = ""
+stackoverflow = ""
+mastodon = ""
+linkedin = ""
+instagram = ""
+youtube = ""
+signal = ""
+telegram = ""
+email = "my emial is"
+phone = ""
+# For every non-empty variable, the corresponding icon is shown in the footer.
+
+# Copyright Notice
+# The copyright notice in the footer can be set by adding the following variable in the configuration:
+
+[extra.footer]
+notice = "This is my <b>copyright</b> notice."
+# HTML can be used there.
+
+# Syntax Highlighting
+# The theme makes use of Zola code highlighting feature and supports setting a different color scheme depending on whether a light or dark theme is active. Just enable syntax highlighting the following way:
+
+highlight_code = true
+highlight_theme = "css"
+# Index Page
+# A title and text can be added to the index page by creating a file _index.md in the content directory. Additionally, a slogan and an image an be configured in the config.toml:
+
+[extra.index]
+slogan = "Slogan text that is shown under the title"
+image = "portrait.png"
+image_alt = "Placeholder text describing the index's image."
