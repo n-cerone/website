@@ -26,7 +26,8 @@ daisyui_theme_light = "light"
 daisyui_theme_dark = "dark"
 
 [extra.navbar]
+# Swapped i18n_key to direct names to bypass the language file dependency crash
 links = [
-    { url = "projects", i18n_key = "projects" },
-    { url = "skills", i18n_key = "skills" }
+    { url = "projects", name = "Projects" },
+    { url = "skills", name = "Skills" }
 ]
