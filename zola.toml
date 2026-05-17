@@ -11,7 +11,6 @@ build_search_index = true
 index_format = "elasticlunr_json"
 
 [markdown]
-# Removed the obsolete highlight_code line to fix the compilation crash
 
 [markdown.highlighting]
 theme = "catppuccin-mocha"
