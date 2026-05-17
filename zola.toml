@@ -1,14 +1,10 @@
-# The URL the site will be built for
 base_url = "https://ncerone.com"
-title = "Nick Cerone"
-description = "Portfolio"
+title = "Nicholas Cerone"
+description = "Mechanical Engineering Portfolio"
 default_language = "en"
 theme = "project-portfolio"
 
-# Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
-# Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
 [search]
@@ -16,21 +12,24 @@ index_format = "elasticlunr_json"
 
 [markdown]
 highlight_code = true
+highlight_theme = "css"
 
 [markdown.highlighting]
 theme = "catppuccin-mocha"
 
 [taxonomies]
-# The theme uses these specific groupings to sort your engineering projects
-{ name = "projects", paginate_by = 5, feed = true },
-{ name = "skills", paginate_by = 5, feed = true },
+# This array structure is now properly formatted for Zola's compilation engine
+taxonomies = [
+    { name = "projects", paginate_by = 5, feed = true },
+    { name = "skills", paginate_by = 5, feed = true }
+]
 
 [extra]
-# Activates the dark/light mode toggle in the navbar
 enable_theme_switching = true
+daisyui_theme_light = "light"
+daisyui_theme_dark = "dark"
 
 [extra.navbar]
-# This populates your main menu layout link system
 links = [
     { url = "projects", i18n_key = "projects" },
     { url = "skills", i18n_key = "skills" }
