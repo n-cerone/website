@@ -37,11 +37,11 @@ slogan = "Mechanical Engineering Portfolio"
 image = "portrait.png"
 image_alt = "Nicholas Cerone Portrait"
 
-[extra.navbar]
-links = [
-    { url = "projects", i18n_key = "projects" },
-    { url = "skills", i18n_key = "skills" }
-]
+# [extra.navbar]
+# links = [
+#     { url = "projects", i18n_key = "projects" },
+#     { url = "skills", i18n_key = "skills" }
+# ]
 
 [extra.social]
 github = "https://github.com/n-cerone"
