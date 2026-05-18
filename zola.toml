@@ -6,6 +6,7 @@ theme = "project-portfolio"
 default_language = "en"
 compile_sass = true
 build_search_index = true
+title = "Nick Cerone"
 
 taxonomies = [
     { name = "projects", paginate_by = 5, feed = true },
@@ -45,8 +46,8 @@ image_alt = "Nicholas Cerone Portrait"
 
 [extra.social]
 github = "https://github.com/n-cerone"
-linkedin = ""
+linkedin = "https://www.linkedin.com/in/nicholas-cerone/"
 email = "your-email@gmail.com"
 
 [extra.footer]
-notice = "© 2026 Nicholas Cerone. All rights reserved."
+notice = "Nicholas Cerone. All rights reserved."
